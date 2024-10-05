@@ -9,6 +9,7 @@ private:
     int r, g, b;
 
 public:
+    // constructors
     Color() // default constructor
     {
         r = 0;
@@ -62,7 +63,7 @@ public:
  **************************************/
 int main()
 {
-    // using individual setters/getters for the first
+    // using individual setters/getters for the first example
     Color color1;
     color1.setterR(100);
     color1.setterB(234);
@@ -71,22 +72,16 @@ int main()
     cout << "green value: " << color1.getterG() << '\n';
     cout << "blue value: " << color1.getterB() << '\n';
 
-    // using constructors to show
-    /*
-    Color color2;
-    color2.setterAll(232, 111, 40);
+    // using constructors to initialize/show objects
+    Color color2; // uses default constructor
     color2.printAll();
 
-    Color color3;
-    color3.setterAll(54, 100, 140);
+    Color color3(10); // uses partial constructor, parameter for red
     color3.printAll();
 
-    Color color4;
-    color4.setterAll(24, 1, 30);
+    Color color4(220, 100); // uses partial, parameters for red/green
     color4.printAll();
 
-    Color color5;
-    color5.setterAll(98, 11, 210);
+    Color color5(123, 45, 67); // uses complete constructor to fully intialize object
     color5.printAll();
-    */
 }
